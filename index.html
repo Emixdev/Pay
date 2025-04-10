@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment EmixXsilence</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Payment <strong>Emix Store</strong></h1>
+    <p>友</p>
+
+    <div class="card">
+      <h3>DANA</h3>
+      <p>Nomor: <span id="dana">083137741581</span></p>
+      <button onclick="copyToClipboard('dana')">Salin Nomor</button>
+    </div>
+
+    <div class="card">
+      <h3>OVO</h3>
+      <p>Nomor: <span id="ovo">083137741581</span></p>
+      <button onclick="copyToClipboard('ovo')">Salin Nomor</button>
+    </div>
+
+    <div class="card">
+      <h3>GOPAY</h3>
+      <p>Nomor: <span id="gopay">083137741581</span></p>
+      <button onclick="copyToClipboard('gopay')">Salin Nomor</button>
+    </div>
+
+    <p class="note">NOTE: MUST INCLUDE PROOF OF TRANSFER</p>
+  </div>
+
+  <script>
+    function copyToClipboard(id) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Nomor disalin!");
+      });
+    }
+  </script>
+</body>
+</html>
